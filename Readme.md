@@ -27,7 +27,7 @@ your_dbt_project:
       schema: "{{ env_var('DBT_POSTGRES_SCHEMA') }}"   
 ```
 
-There, it is possible to read credentials from environment variables. It will look for environment variables in the docker container and injects them into the yaml file. Note: numbers need to be converted. More can be found [here](https://docs.getdbt.com/reference/dbt-jinja-functions/env_var). Note that the project name configured in `profiles.yml` needs to match with your project name.
+There, it is possible to read credentials from environment variables. It will look for environment variables in the docker container and injects them into the yaml file. Note: numbers need to be converted. More can be found [here](https://docs.getdbt.com/reference/dbt-jinja-functions/env_var). Furthermore, do not forget that the project name configured in `profiles.yml` needs to match with your project name.
 
 The environment variables can be fed into the docker container when executing docker run. Have a look at the `make run` command: 
 
